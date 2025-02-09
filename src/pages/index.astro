@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Portfolio & Blog">
+	<div class="max-w-6xl mx-auto px-4">
+		<!-- Hero Section -->
+		<section class="py-20 text-center">
+			<div class="mb-8">
+				<div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 border-4 border-purple-600 shadow-lg">
+					<img 
+						src="/images/CaueLopes.jpg" 
+						alt="Profile Photo" 
+						class="w-full h-full object-cover"
+					/>
+				</div>
+			</div>
+			<h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
+				Caue Lopes 
+			</h1>
+			<h2 class="text-2xl  from-purple-600 to-blue-600 max-w-2xl mx-auto">
+				Software Quality Engineer and Developer</h2>
+			<p class="text-xl text-gray-600 max-w-2xl mx-auto">
+				Professional software developer passionate about creating impactful solutions and sharing knowledge.
+			</p>
+		</section>
+
+		<!-- Featured Work -->
+		<section class="py-16">
+			<h2 class="text-3xl font-bold mb-8">Featured Work</h2>
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-lg shadow-md p-6">
+					<h3 class="text-xl font-semibold mb-2">Latest Project</h3>
+					<p class="text-gray-600">Check out my latest projects</p>
+					<a href="/projects" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">View Projects →</a>
+				</div>
+				<div class="bg-white rounded-lg shadow-md p-6">
+					<h3 class="text-xl font-semibold mb-2">Recent Blog Post</h3>
+					<p class="text-gray-600">Title of your latest blog post or article.</p>
+					<a href="/blog" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Read Blog →</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills Overview -->
+		<section class="py-16">
+			<h2 class="text-3xl font-bold mb-8">Skills & Expertise</h2>
+			<div class="grid md:grid-cols-3 gap-6">
+				<a href="/skills/advanced" class="group">
+					<div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-white">
+						<h3 class="font-semibold mb-3 group-hover:text-purple-600">Advanced Skills</h3>
+						<ul class="space-y-2 text-gray-600">
+							<li>Skill 1</li>
+							<li>Skill 2</li>
+							<li>Skill 3</li>
+						</ul>
+						<span class="text-sm text-purple-600 mt-4 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
+							View Details →
+						</span>
+					</div>
+				</a>
+				<a href="/skills/learning" class="group">
+					<div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-white">
+						<h3 class="font-semibold mb-3 group-hover:text-purple-600">Currently Learning</h3>
+						<ul class="space-y-2 text-gray-600">
+							<li>Technology 1</li>
+							<li>Technology 2</li>
+							<li>Technology 3</li>
+						</ul>
+						<span class="text-sm text-purple-600 mt-4 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
+							View Details →
+						</span>
+					</div>
+				</a>
+				<a href="/skills/certificates" class="group">
+					<div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-white">
+						<h3 class="font-semibold mb-3 group-hover:text-purple-600">Certificates</h3>
+						<ul class="space-y-2 text-gray-600">
+							<li>Certificate 1</li>
+							<li>Certificate 2</li>
+							<li>Certificate 3</li>
+						</ul>
+						<span class="text-sm text-purple-600 mt-4 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
+							View Details →
+						</span>
+					</div>
+				</a>
+			</div>
+		</section>
+	</div>
+</Layout>

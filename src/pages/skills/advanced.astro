@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const advancedSkills = [
+  {
+    name: 'JavaScript',
+    level: 95,
+    description: 'Expert-level JavaScript development including ES6+, async programming, and design patterns.',
+    projects: [
+      'Built complex SPAs using modern JavaScript',
+      'Developed custom frameworks and libraries',
+      'Implemented advanced state management solutions'
+    ]
+  },
+  {
+    name: 'React',
+    level: 90,
+    description: 'Advanced React development with deep understanding of hooks, context, and performance optimization.',
+    projects: [
+      'Created enterprise-level React applications',
+      'Developed custom hooks and components',
+      'Implemented complex state management solutions'
+    ]
+  },
+  // Add more skills as needed
+];
+---
+
+<Layout title="Advanced Skills">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold mb-12 text-center">Advanced Skills</h1>
+    
+    <div class="space-y-8">
+      {advancedSkills.map(skill => (
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-bold text-purple-600">{skill.name}</h2>
+            <span class="text-gray-600 font-semibold">{skill.level}%</span>
+          </div>
+          
+          <div class="w-full bg-gray-200 rounded-full h-2.5 mb-6">
+            <div 
+              class="bg-purple-600 h-2.5 rounded-full" 
+              style={`width: ${skill.level}%`}
+            ></div>
+          </div>
+          
+          <p class="text-gray-700 mb-4">{skill.description}</p>
+          
+          <div class="mt-4">
+            <h3 class="font-semibold mb-2">Related Projects & Experience:</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-600">
+              {skill.projects.map(project => (
+                <li>{project}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

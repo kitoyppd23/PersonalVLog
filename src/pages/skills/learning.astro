@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const learningSkills = [
+  {
+    name: 'Rust',
+    progress: 40,
+    description: 'Learning systems programming and memory safety concepts with Rust.',
+    currentFocus: [
+      'Understanding ownership and borrowing',
+      'Building CLI applications',
+      'Working with cargo and crates'
+    ],
+    resources: [
+      'The Rust Programming Language Book',
+      'Rust by Example',
+      'Community Projects'
+    ]
+  },
+  {
+    name: 'Machine Learning',
+    progress: 30,
+    description: 'Exploring machine learning concepts and practical applications.',
+    currentFocus: [
+      'Neural Networks fundamentals',
+      'TensorFlow and PyTorch basics',
+      'Data preprocessing techniques'
+    ],
+    resources: [
+      'Online courses',
+      'Research papers',
+      'Practical projects'
+    ]
+  },
+  // Add more skills as needed
+];
+---
+
+<Layout title="Learning Journey">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold mb-12 text-center">Learning Journey</h1>
+    
+    <div class="space-y-8">
+      {learningSkills.map(skill => (
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-bold text-green-600">{skill.name}</h2>
+            <span class="text-gray-600 font-semibold">{skill.progress}% Complete</span>
+          </div>
+          
+          <div class="w-full bg-gray-200 rounded-full h-2.5 mb-6">
+            <div 
+              class="bg-green-500 h-2.5 rounded-full" 
+              style={`width: ${skill.progress}%`}
+            ></div>
+          </div>
+          
+          <p class="text-gray-700 mb-4">{skill.description}</p>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-semibold mb-2">Current Focus:</h3>
+              <ul class="list-disc list-inside space-y-1 text-gray-600">
+                {skill.currentFocus.map(focus => (
+                  <li>{focus}</li>
+                ))}
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold mb-2">Learning Resources:</h3>
+              <ul class="list-disc list-inside space-y-1 text-gray-600">
+                {skill.resources.map(resource => (
+                  <li>{resource}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

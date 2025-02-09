@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const workHistory = [
+	{
+		period: '2023 - Present',
+		role: 'Senior Developer',
+		company: 'Company Name',
+		description: 'Description of responsibilities and achievements.'
+	},
+	{
+		period: '2020 - 2023',
+		role: 'Full Stack Developer',
+		company: 'Previous Company',
+		description: 'Description of responsibilities and achievements.'
+	},
+	// Add more work history items
+];
+---
+
+<Layout title="Work Timeline">
+	<div class="max-w-4xl mx-auto px-4 py-12">
+		<h1 class="text-4xl font-bold mb-12 text-center">Work Timeline</h1>
+		
+		<div class="relative">
+			<!-- Timeline line -->
+			<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
+			
+			{workHistory.map((work, index) => (
+				<div class={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+					<div class="flex-1"></div>
+					<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-600 rounded-full"></div>
+					<div class="flex-1">
+						<div class={`mx-8 p-6 bg-white rounded-lg shadow-md ${index % 2 === 0 ? 'text-right' : ''}`}>
+							<span class="text-sm text-purple-600 font-semibold">{work.period}</span>
+							<h3 class="text-xl font-bold mt-1">{work.role}</h3>
+							<h4 class="text-gray-600 mb-2">{work.company}</h4>
+							<p class="text-gray-700">{work.description}</p>
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</Layout>

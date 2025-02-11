@@ -4,10 +4,11 @@ import Layout from '../layouts/Layout.astro';
 const projects = [
   {
     title: 'TA-E2E-Swaglabs',
-    description: 'Testes automatizados com Cypress para a aplicação Swaglabs',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+    description: 'Automated testing with Cypress for the Swaglabs application',
+    technologies: ['JavaScript', 'Cypress', 'VScode', 'HTML', 'CSS'],
     image: '/public/TA-E2E-Swaglabs.jpg',
-    link: '#'
+    link: 'https://github.com/kitoyppd23/TA-E2E-Swaglabs',
+    videoLink: 'https://www.linkedin.com/feed/update/urn:li:activity:7125584687556665345/?originTrackingId=OV%2BbW4gbRp2xP%2BGgir6ECQ%3D%3D'
   },
   {
     title: 'Task Management App',
@@ -44,6 +45,15 @@ const projects = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
+            {project.videoLink && (
+              <a href={project.videoLink} class="text-purple-600 hover:text-purple-700 inline-flex items-center mt-2 ml-4">
+                View Video
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </a>
+            )}
           </div>
         </div>
       ))}

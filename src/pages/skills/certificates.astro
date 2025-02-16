@@ -3,35 +3,67 @@ import Layout from '../../layouts/Layout.astro';
 
 const certificates = [
   {
-    title: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
-    date: '2024',
-    validUntil: '2027',
-    credentialId: 'AWS-1234-5678',
-    description: 'Advanced certification for designing distributed systems on AWS.',
+    title: 'Scrum Professional Certificate',
+    issuer: 'CertiProf',
+    date: '2023',
+    //validUntil: '2027',
+    credentialId: '90675406',
+    description: 'Scrum Fundamentals.',
     skills: [
-      'Cloud Architecture',
-      'Scalability',
-      'Security',
-      'Cost Optimization'
+      'Covering its principles, roles, and events. It is ideal for those who want to understand the basic concepts of the agile framework before advancing to more advanced certifications, such as Scrum Master Certified (SMC).',
+      //'Scalability',
+      //'Security',
+      //'Cost Optimization'
     ],
-    image: 'https://via.placeholder.com/400x300'
+    image: '/scrum professional.jpg'
+  },  
+  {
+    title: 'Introduction to quality assurance',
+    issuer: 'Iterasys',
+    date: '2023',
+    //validUntil: '2026',
+   // credentialId: 'GWD-9876-5432',
+    description: 'Covering the key concepts, methodologies, and tools used to ensure software quality.',
+    skills: [
+      'Types of tests',
+      'agile methodologies',
+      'testing tools',
+      'processes and best practices'
+    ],
+    image: '/Iterasys.jpg'
   },
   {
-    title: 'Professional Web Developer',
-    issuer: 'Google',
+    title: 'CT-TAE',
+    issuer: 'Chronos Academy',
     date: '2023',
-    validUntil: '2026',
-    credentialId: 'GWD-9876-5432',
-    description: 'Comprehensive certification covering modern web development practices.',
+    //validUntil: '2026',
+    //credentialId: 'GWD-9876-5432',
+    description: 'Understanding and learning international standards regarding best practices in software quality, specifically in the areas of test automation and delivery..',
     skills: [
-      'Frontend Development',
-      'Progressive Web Apps',
-      'Performance Optimization',
-      'Web Security'
+      'Understanding the manual',
+      'Regulations',
+      'testing tools',
+      'preparing for the test'
     ],
-    image: 'https://via.placeholder.com/400x300'
-  },
+    image: '/tae.jpg'
+  	  },
+      {
+        title: 'Professional Quality Engineer',
+        issuer: 'F1rst - Santander',
+        date: '2024',
+        //validUntil: '2026',
+        //credentialId: 'GWD-9876-5432',
+        description: 'Banco Santanders professional training course for quality engineers.',
+        skills: [
+          'Test Automation',
+          'SAT Automation Framework',
+          'Selenium',
+          'Pipeline',
+          'Web, Mobile and API'
+        ],
+        image: '/professionalSantander.jpg'
+      }
+
   // Add more certificates as needed
 ];
 ---
@@ -57,25 +89,25 @@ const certificates = [
               
               <div class="grid md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <p class="text-sm text-gray-600">Issuer</p>
-                  <p class="font-semibold">{cert.issuer}</p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Issuer</p>
+                  <p class="font-semibold text-gray-900">{cert.issuer}</p>
                 </div>
                 <div>
-                  <p class="text-sm text-gray-600">Date Issued</p>
-                  <p class="font-semibold">{cert.date}</p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Date Issued</p>
+                  <p class="font-semibold text-gray-900">{cert.date}</p>
                 </div>
                 <div>
-                  <p class="text-sm text-gray-600">Valid Until</p>
-                  <p class="font-semibold">{cert.validUntil}</p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Valid Until</p>
+                  <p class="font-semibold text-gray-900">{cert.validUntil}</p>
                 </div>
                 <div>
-                  <p class="text-sm text-gray-600">Credential ID</p>
-                  <p class="font-semibold">{cert.credentialId}</p>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Credential ID</p>
+                  <p class="font-semibold text-gray-900">{cert.credentialId}</p>
                 </div>
               </div>
               
               <div>
-                <h3 class="font-semibold mb-2">Skills Covered:</h3>
+                <h3 class="font-semibold mb-2 text-gray-900">Skills Covered:</h3>
                 <div class="flex flex-wrap gap-2">
                   {cert.skills.map(skill => (
                     <span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">

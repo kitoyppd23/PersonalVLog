@@ -18,69 +18,80 @@ import Layout from '../layouts/Layout.astro';
 			<h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
 				Caue Lopes 
 			</h1>
-			<h2 class="text-2xl  from-purple-600 to-blue-600 max-w-2xl mx-auto">
-				Software Quality Engineer and Developer</h2>
-			<p class="text-xl text-gray-600 max-w-2xl mx-auto">
+			<h2 class="text-2xl text-gray-800 dark:text-gray-200 max-w-2xl mx-auto">
+				Software Quality Engineer and Developer
+			</h2>
+			<p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
 				Professional software developer passionate about creating impactful solutions and sharing knowledge.
 			</p>
 		</section>
 
 		<!-- Featured Work -->
 		<section class="py-16">
-			<h2 class="text-3xl font-bold mb-8">Featured Work</h2>
+			<h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Featured Work</h2>
 			<div class="grid md:grid-cols-2 gap-8">
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h3 class="text-xl font-semibold mb-2">Latest Project</h3>
-					<p class="text-gray-600">Check out my latest projects</p>
-					<a href="/projects" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">View Projects →</a>
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+					<h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Latest Project</h3>
+					<p class="text-gray-600 dark:text-gray-400">Check out my latest projects</p>
+					<a href="/projects" class="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 mt-4 inline-block">
+						View Projects →
+					</a>
 				</div>
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h3 class="text-xl font-semibold mb-2">Recent Blog Post</h3>
-					<p class="text-gray-600">Title of your latest blog post or article.</p>
-					<a href="/blog" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Read Blog →</a>
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+					<h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Recent Blog Post</h3>
+					<p class="text-gray-600 dark:text-gray-400">Title of your latest blog post or article.</p>
+					<a href="/blog" class="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 mt-4 inline-block">
+						Read Blog →
+					</a>
 				</div>
 			</div>
 		</section>
 
 		<!-- Skills Overview -->
 		<section class="py-16">
-			<h2 class="text-3xl font-bold mb-8">Skills & Expertise</h2>
+			<h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Skills & Expertise</h2>
 			<div class="grid md:grid-cols-3 gap-6">
 				<a href="/skills/advanced" class="group">
-					<div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-white">
-						<h3 class="font-semibold mb-3 group-hover:text-purple-600">Advanced Skills</h3>
-						<ul class="space-y-2 text-gray-600">
-							<li>Skill 1</li>
-							<li>Skill 2</li>
-							<li>Skill 3</li>
+					<div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-white dark:hover:bg-gray-700">
+						<h3 class="font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
+							Advanced Skills
+						</h3>
+						<ul class="space-y-2 text-gray-600 dark:text-gray-400">
+							<li>JavaScript</li>
+							<li>Cypress</li>
+							<li>Selenium</li>
 						</ul>
-						<span class="text-sm text-purple-600 mt-4 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
+						<span class="text-sm text-purple-600 dark:text-purple-400 mt-4 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
 							View Details →
 						</span>
 					</div>
 				</a>
 				<a href="/skills/learning" class="group">
-					<div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-white">
-						<h3 class="font-semibold mb-3 group-hover:text-purple-600">Currently Learning</h3>
-						<ul class="space-y-2 text-gray-600">
-							<li>Technology 1</li>
-							<li>Technology 2</li>
-							<li>Technology 3</li>
+					<div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-white dark:hover:bg-gray-700">
+						<h3 class="font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
+							Currently Learning
+						</h3>
+						<ul class="space-y-2 text-gray-600 dark:text-gray-400">
+							<li>Spring Boot</li>
+							<li>React</li>
+							
 						</ul>
-						<span class="text-sm text-purple-600 mt-4 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
+						<span class="text-sm text-purple-600 dark:text-purple-400 mt-4 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
 							View Details →
 						</span>
 					</div>
 				</a>
 				<a href="/skills/certificates" class="group">
-					<div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-white">
-						<h3 class="font-semibold mb-3 group-hover:text-purple-600">Certificates</h3>
-						<ul class="space-y-2 text-gray-600">
-							<li>Certificate 1</li>
-							<li>Certificate 2</li>
-							<li>Certificate 3</li>
+					<div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-white dark:hover:bg-gray-700">
+						<h3 class="font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
+							Certificates
+						</h3>
+						<ul class="space-y-2 text-gray-600 dark:text-gray-400">
+							<li>Scrum Professional Certificate</li>
+							<li>Introduction to quality assurance</li>
+							<li>CT-TAE</li>
 						</ul>
-						<span class="text-sm text-purple-600 mt-4 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
+						<span class="text-sm text-purple-600 dark:text-purple-400 mt-4 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
 							View Details →
 						</span>
 					</div>

@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from '../components/ThemeToggle.astro';
+
 interface Props {
 	title: string;
 }
@@ -32,34 +34,37 @@ const socialLinks = [
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
-			<nav class="max-w-6xl mx-auto px-4 py-3">
-				<ul class="flex gap-6 justify-center">
-					{navItems.map(item => (
-						<li>
-							<a href={item.href} class="text-gray-700 hover:text-purple-600 transition-colors">
-								{item.text}
-							</a>
-						</li>
-					))}
-				</ul>
-			</nav>
+	<body class="bg-white dark:bg-gray-900 transition-colors duration-200">
+		<header class="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-sm z-50">
+			<div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+				<nav>
+					<ul class="flex gap-6 justify-center">
+						{navItems.map(item => (
+							<li>
+								<a href={item.href} class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+									{item.text}
+								</a>
+							</li>
+						))}
+					</ul>
+				</nav>
+				<ThemeToggle />
+			</div>
 		</header>
 		<main class="pt-16">
 			<slot />
 		</main>
-		<footer class="bg-gray-50 mt-20">
+		<footer class="bg-gray-50 dark:bg-gray-800 mt-20">
 			<div class="max-w-6xl mx-auto px-4 py-12">
 				<div class="text-center mb-8">
-					<h3 class="text-lg font-semibold mb-4">Other places you can find me</h3>
+					<h3 class="text-lg font-semibold mb-4 text-gray-900">Other places you can find me</h3>
 					<div class="flex justify-center gap-6">
 						{socialLinks.map(link => (
 							<a 
 								href={link.url} 
 								target="_blank" 
 								rel="noopener noreferrer" 
-								class="text-gray-600 hover:text-purple-600 transition-colors"
+								class="text-gray-600 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
 								title={link.name}
 							>
 								<svg 
@@ -77,13 +82,13 @@ const socialLinks = [
 						))}
 					</div>
 				</div>
-				<div class="text-center text-gray-600">
+				<div class="text-center text-gray-600 dark:text-gray-400">
 					<p class="mb-2">Built by [Your Name] with Bolt's assistance</p>
 					<p class="text-sm">
 						Technologies used:
-						<span class="text-purple-600">Astro</span> •
-						<span class="text-purple-600">Tailwind CSS</span> •
-						<span class="text-purple-600">TypeScript</span>
+						<span class="text-purple-600 dark:text-purple-400">Astro</span> •
+						<span class="text-purple-600 dark:text-purple-400">Tailwind CSS</span> •
+						<span class="text-purple-600 dark:text-purple-400">TypeScript</span>
 					</p>
 					<p class="mt-4">&copy; {new Date().getFullYear()} - All rights reserved</p>
 				</div>
@@ -107,6 +112,10 @@ const socialLinks = [
 		font-family: system-ui, sans-serif;
 		background: white;
 		scroll-behavior: smooth;
+	}
+	html.dark {
+		background: rgb(17, 24, 39);
+		color: #fff;
 	}
 	code {
 		font-family:

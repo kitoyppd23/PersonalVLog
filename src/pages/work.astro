@@ -35,23 +35,23 @@ const workHistory = [
 ---
 
 <Layout title="Work Timeline">
-	<div class="max-w-6xl mx-auto px-4 py-12">
-		<h1 class="text-4xl font-bold mb-12 text-center">Work Timeline</h1>
+	<div class="max-w-5xl mx-auto px-4 py-12">
+		<h1 class="text-4xl font-bold mb-12 text-center dark:text-white">Work Timeline</h1>
 		
 		<div class="relative">
 			<!-- Timeline line -->
-			<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
+			<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200 dark:bg-gray-700 md:block hidden"></div>
 			
 			{workHistory.map((work, index) => (
-				<div class={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-					<div class="flex-1"></div>
-					<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-600 rounded-full"></div>
-					<div class="flex-1">
-						<div class={`mx-8 p-6 bg-white rounded-lg shadow-md ${index % 2 === 0 ? 'text-right' : ''}`}>
-							<span class="text-sm text-purple-600 font-semibold">{work.period}</span>
-							<h3 class="text-xl font-bold mt-1">{work.role}</h3>
-							<h4 class="text-gray-600 mb-2">{work.company}</h4>
-							<p class="text-gray-700" set:html={work.description}></p>
+				<div class={`relative flex items-center mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} flex-col md:flex-row`}>
+					<div class="md:flex-1 w-full"></div>
+					<div class="absolute md:left-1/2 left-0 transform md:-translate-x-1/2 w-4 h-4 bg-purple-600 rounded-full"></div>
+					<div class="md:flex-1 w-full">
+						<div class={`mx-2 md:mx-8 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md ${index % 2 === 0 ? 'md:text-right' : ''}`}>
+							<span class="text-sm text-purple-600 dark:text-purple-400 font-semibold">{work.period}</span>
+							<h3 class="text-xl font-bold mt-1 dark:text-white">{work.role}</h3>
+							<h4 class="text-gray-600 dark:text-gray-300 mb-2">{work.company}</h4>
+							<div class="text-gray-700 dark:text-gray-300" set:html={work.description}></div>
 						</div>
 					</div>
 				</div>

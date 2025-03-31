@@ -2,6 +2,118 @@
 import Layout from '../../layouts/Layout.astro';
 
 const certificates = [
+
+
+{
+        title: 'Java Essentials',
+        issuer: 'LinuxTips ',
+        date: '2025',
+        validUntil: '',
+        //credentialId: 'GWD-9876-5432',
+        description: 'This course aims to provide a practical introduction to Java, one of the most popular programming languages ​​in the world. The focus will be on fundamental programming concepts and object-oriented programming (OOP)..',
+        skills: [
+          'SetUp environment - JDK, JRE and JVM',
+          'Data types and operators',
+          'Conditional Branches and Repetition Loops',
+          'Arrays',
+          'POO, Inheritance and polymorphism',
+          
+        ],
+        image: '/JavaEssensials.jpg'
+      },
+
+
+{
+        title: 'HTTP: A Deep Dive into How the Web Works',
+        issuer: 'Alura ',
+        date: '2025',
+        validUntil: '',
+        //credentialId: 'GWD-9876-5432',
+        description: 'Understand the architecture and fundamental concepts of the HTTP protocol, Implement HTTPS to protect an applications data during web communication, Explore the key advances brought by HTTP/2 and HTTP/3 to optimize performance, Uncover the components of HTTP messages, such as requests, responses, and headers.',
+        skills: [
+          'Learning about URLs',
+          'Inspecting the HTTP protocol',
+          'Securing the Web with HTTPS',
+          'Controlling HTTP',
+          'Application Vulnerabilities',
+          
+        ],
+        image: '/httpentendendoaweb.jpg'
+      },
+
+{
+        title: 'Secure Development – Intermediate',
+        issuer: 'Santander F1rst - Security Champions ',
+        date: '2025',
+        validUntil: '',
+        //credentialId: 'GWD-9876-5432',
+        description: 'A Secure Development course focuses on best practices for writing secure code, identifying vulnerabilities, and mitigating security risks throughout the software development lifecycle..',
+        skills: [
+          'Cryptography',
+          'Security in Third-Party Software Dependencies',
+          'Security in the Development Environment',
+          'Threat Modeling',
+          'Application Vulnerabilities',
+          'Sensitive Information in the JWT Token',
+        ],
+        image: '/Desenvolvimento Seguro Intermediario.jpg'
+      },
+
+{
+        title: 'Security Champions – Secure API Development – Advanced',
+        issuer: 'Santander F1rst - Security Champions ',
+        date: '2025',
+        validUntil: '',
+        //credentialId: 'GWD-9876-5432',
+        description: '',
+        skills: [
+          'Introduction to GDS-API',
+          'API Authentication and Authorization',
+          'API Gateway',
+          'JWT',
+          'Mass Assignment',
+          'Security Configuration Failures',
+          'Hardening',
+          'IAC Precautions',
+        ],
+        image: '/Security Champions API.jpg'
+      },
+      
+      {
+        title: ' Selenium from basics to GRID',
+        issuer: 'Udemy - Francisco Wagner Costa Aquino ',
+        date: '2024',
+        validUntil: '',
+        //credentialId: 'GWD-9876-5432',
+        description: 'Creating automated functional tests for web applications, primarily using Selenium WebDriver. We will start from the basics, covering common errors and strategies to solve them efficiently. We will focus on best practices, such as making test code readable, keeping it concise, and facilitating ongoing maintenance.',
+        skills: [
+          'Screenshot at the end of each test',
+          'Switching on which browser to use',
+          'Organizing tests with PageObject',
+          'Execution in GRID',
+          'Execution in the Cloud',
+          'Create an automated testing project in JAVA for Web applications from SCRATCH.'
+        ],
+        image: '/Selenium do básico ao GRID.jpg'
+      },
+
+      {
+        title: ' Secure Development – Introduction',
+        issuer: 'Santander F1rst - Security Champions ',
+        date: '2024',
+        validUntil: '',
+        //credentialId: 'GWD-9876-5432',
+        description: 'In this course, you will learn everything you need to know about secure software development, from the basics to best practices. You will discover how to identify and fix security vulnerabilities, how to create effective security policies, and how to implement security measures in your projects.',
+        skills: [
+          'Introduction to Information Security',
+          'Layered Security',
+          'Privacy by Design',
+          'Security Testing',
+          'Ethical Hacking Test (EHT)',
+        ],
+        image: '/Desenvolvimento Seguro Fundamental.jpg'
+      },
+
   {
     title: 'Scrum Professional Certificate',
     issuer: 'CertiProf',
@@ -63,59 +175,42 @@ const certificates = [
         ],
         image: '/professionalSantander.jpg'
       },
+
       {
-        title: ' Secure Development – Introduction',
-        issuer: 'Santander F1rst - Security Champions ',
-        date: '2024',
+        title: 'System Administrator',
+        issuer: 'Centrify',
+        date: '2022',
         validUntil: '',
         //credentialId: 'GWD-9876-5432',
-        description: 'In this course, you will learn everything you need to know about secure software development, from the basics to best practices. You will discover how to identify and fix security vulnerabilities, how to create effective security policies, and how to implement security measures in your projects.',
+        description: 'capability for deployment, monitoring and administration of the Centrify cloud or on-premise system.',
         skills: [
-          'Introduction to Information Security',
-          'Layered Security',
-          'Privacy by Design',
-          'Security Testing',
-          'Ethical Hacking Test (EHT)',
+          'MFA',
+          'Vault System',
+          'Virtual Machine',
+          'B2B',
+          'Cyber Security'
         ],
-        image: '/Desenvolvimento Seguro Fundamental.jpg'
+        image: '/Centrify.jpg'
       },
+
       {
-        title: 'Secure Development – Intermediate',
-        issuer: 'Santander F1rst - Security Champions ',
-        date: '2025',
+        title: 'Automated testing with cypress Basic',
+        issuer: 'Udemy - Walmyr Filho ',
+        date: '2021',
         validUntil: '',
         //credentialId: 'GWD-9876-5432',
-        description: 'A Secure Development course focuses on best practices for writing secure code, identifying vulnerabilities, and mitigating security risks throughout the software development lifecycle..',
+        description: 'This course provides a practical introduction to Cypress, one of the most popular tools for front-end test automation. The focus will be on teaching how to create and run automated tests on web applications, how to install, use, create the first automated tests, testing strategies and best practices..',
         skills: [
-          'Cryptography',
-          'Security in Third-Party Software Dependencies',
-          'Security in the Development Environment',
-          'Threat Modeling',
-          'Application Vulnerabilities',
-          'Sensitive Information in the JWT Token',
+          'Basic Cypress command concepts (cy.visit(), cy.get(), cy.click(), etc.',
+          'Interacting with elements',
+          '(commands like cy.wait(), cy.contains(),',
+          'first project',
+          'POO and Custom commands',
+          
         ],
-        image: '/Desenvolvimento Seguro Intermediario.jpg'
+        image: '/CypressBasico.jpg'
       },
-      {
-        title: 'Security Champions – Secure API Development – Advanced',
-        issuer: 'Santander F1rst - Security Champions ',
-        date: '2025',
-        validUntil: '',
-        //credentialId: 'GWD-9876-5432',
-        description: '',
-        skills: [
-          'Introduction to GDS-API',
-          'API Authentication and Authorization',
-          'API Gateway',
-          'JWT',
-          'Mass Assignment',
-          'Security Configuration Failures',
-          'Hardening',
-          'IAC Precautions',
-        ],
-        image: '/Security Champions API.jpg'
-      }
-      
+
 
   // Add more certificates as needed
 ];
